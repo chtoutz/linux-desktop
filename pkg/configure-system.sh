@@ -5,21 +5,24 @@ if [ "$EUID" -ne 0 ]
         exit
 fi
 
+# set french keyboard layout
+loadkeys fr
+
 # running commands to configure the system
-printf "[main]\ndhcp=dhclient" > /etc/NetworkManager/conf.d/dhcp-client.conf
-printf "[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
-echo "ControllerMode = bredr" >> /etc/bluetooth/main.conf
-echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+# printf "[main]\ndhcp=dhclient" > /etc/NetworkManager/conf.d/dhcp-client.conf
+#printf "[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
+# echo "ControllerMode = bredr" >> /etc/bluetooth/main.conf
+#echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 systemctl enable NetworkManager
 systemctl enable bluetooth
 timedatectl set-ntp true
 
 # disable annoying beep
-echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist
-mkinitcpio -p linux
+#echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist
+#mkinitcpio -p linux
 
 # map vim to nvim
-ln -sf /usr/bin/nvim /usr/bin/vim
+#ln -sf /usr/bin/nvim /usr/bin/vim
 
 
 localectl set-locale LANG=en_US.UTF-8
