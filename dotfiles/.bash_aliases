@@ -9,9 +9,9 @@ alias ll='ls -la'
 alias xclipc='xclip -selection c'
 alias xclipp='xclip -o'
 
-wcommit() {
-  git commit 
-  echo
-  echo COMMITED AS rossoj@vmware.com
-  echo
-}
+# wcommit() {
+#   git commit
+#   echo
+#   echo COMMITED AS rossoj@vmware.com
+#   echo
+# }

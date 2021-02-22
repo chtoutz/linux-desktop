@@ -22,6 +22,8 @@ timedatectl set-ntp true
 #ln -sf /usr/bin/nvim /usr/bin/vim
 
 localectl set-locale LANG=fr_FR.UTF-8
+# Persist keyboard mapping on Xorg
+localectl set-x11-keymap fr
 
 # cp -r ../scripts/usr/local/bin/bye /usr/local/bin/
 # cp -r ../scripts/usr/local/bin/importc /usr/local/bin/
