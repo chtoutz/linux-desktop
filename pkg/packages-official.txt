@@ -16,6 +16,7 @@ firefox-i18n-fr
 geary
 gftp
 git
+gvfs
 gzip
 htop
 lightdm
