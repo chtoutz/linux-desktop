@@ -1,9 +1,4 @@
-cef-minimal
-dropbox
-gconf
-golang-dep
-kubectl-bin
-obs-linuxbrowser-bin
-slack-desktop
-spotify
-zoom
+ulauncher
+dockbarx
+minder
+xfce-dockbarx-plugin
