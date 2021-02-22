@@ -1,12 +1,12 @@
-[url "git@github.com:"]
-  insteadOf = https://github.com/
+# [url "git@github.com:"]
+#   insteadOf = https://github.com/
 
-[include]
-  path = ~/.config/git/internal-sites
+# [include]
+#   path = ~/.config/git/internal-sites
 
 [user]
-	email = joshrosso@gmail.com
-	name = joshrosso
+	email = valentin.stutz@protonmail.com
+	name = Chtoutz
 
-[code]
-	editor = vim
+# [code]
+# 	editor = atom
