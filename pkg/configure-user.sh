@@ -16,8 +16,9 @@ fi
 
 mkdir -p \
   ${HOME}/s \
-  ${HOME}/.ssh \
-  ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml
+  ${HOME}/.icons \
+  ${HOME}/.local \
+  ${HOME}/.ssh
 
 cp -fvr \
   ../dotfiles/.bash_aliases \
@@ -34,8 +35,10 @@ cp -fvr \
 # cp -vr ../dotfiles/.config/nvim/init.vim ${HOME}/.config/nvim/
 # cp -vr ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/
 cp -vr ../s/* ${HOME}/s/
+cp -vr ../dotfiles/.icons/* ${HOME}/.icons/
+cp -vr ../dotfiles/.local/* ${HOME}/.local/
 
 # update xfce settings
-killall xfconfd
-/usr/lib/xfce4/xfconf/xfconfd &
-xfsettingsd --replace &
+# killall xfconfd
+# /usr/lib/xfce4/xfconf/xfconfd &
+# xfsettingsd --replace &

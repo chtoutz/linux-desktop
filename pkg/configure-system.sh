@@ -9,13 +9,14 @@ fi
 printf "[main]\ndhcp=dhclient" > /etc/NetworkManager/conf.d/dhcp-client.conf
 #printf "[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
 # echo "ControllerMode = bredr" >> /etc/bluetooth/main.conf
-#echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
-systemctl enable NetworkManager
-systemctl enable bluetooth
-timedatectl set-ntp true
 
 # disable annoying beep
-#echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist
+echo "blacklist pcspkr" | tee /etc/modprobe.d/nobeep.conf
+systemctl enable NetworkManager
+systemctl enable bluetooth
+systemctl enable lightdm
+timedatectl set-ntp true
+
 #mkinitcpio -p linux
 
 # map vim to nvim
