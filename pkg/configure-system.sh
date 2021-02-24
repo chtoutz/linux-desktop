@@ -5,30 +5,29 @@ if [ "$EUID" -ne 0 ]
         exit
 fi
 
-# set french keyboard layout
-loadkeys fr
-
 # running commands to configure the system
-# printf "[main]\ndhcp=dhclient" > /etc/NetworkManager/conf.d/dhcp-client.conf
+printf "[main]\ndhcp=dhclient" > /etc/NetworkManager/conf.d/dhcp-client.conf
 #printf "[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
 # echo "ControllerMode = bredr" >> /etc/bluetooth/main.conf
-#echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
-systemctl enable NetworkManager
-systemctl enable bluetooth
-timedatectl set-ntp true
 
 # disable annoying beep
-#echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist
+echo "blacklist pcspkr" | tee /etc/modprobe.d/nobeep.conf
+systemctl enable NetworkManager
+systemctl enable bluetooth
+systemctl enable lightdm
+timedatectl set-ntp true
+
 #mkinitcpio -p linux
 
 # map vim to nvim
 #ln -sf /usr/bin/nvim /usr/bin/vim
 
-
 localectl set-locale LANG=fr_FR.UTF-8
+# Persist keyboard mapping on Xorg
+localectl set-x11-keymap fr
 
-cp -r ../scripts/usr/local/bin/bye /usr/local/bin/
-cp -r ../scripts/usr/local/bin/importc /usr/local/bin/
+# cp -r ../scripts/usr/local/bin/bye /usr/local/bin/
+# cp -r ../scripts/usr/local/bin/importc /usr/local/bin/
 
 # make vconsole font larger
 VCONSOLE_FONT=FONT=ter-v32n.psf.gz

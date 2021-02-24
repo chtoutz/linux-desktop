@@ -14,7 +14,10 @@ dmenu
 firefox
 firefox-i18n-fr
 geary
+gftp
 git
+gparted
+gvfs
 gzip
 htop
 lightdm
@@ -38,6 +41,8 @@ sudo
 terminus-font
 ttf-hack
 ttf-inconsolata
+ttf-opensans
+ttf-roboto
 transmission-gtk
 vlc
 volumeicon
