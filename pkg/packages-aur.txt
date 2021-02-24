@@ -1,4 +1,3 @@
 ulauncher
-dockbarx
 minder
-xfce-dockbarx-plugin
+pamac-aur
