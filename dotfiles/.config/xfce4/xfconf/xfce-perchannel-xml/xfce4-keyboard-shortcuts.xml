@@ -61,10 +61,10 @@
       <property name="&lt;Super&gt;t" type="string" value="jumpapp xfce4-terminal"/>
       <property name="&lt;Super&gt;e" type="string" value="jumpapp thunar"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="xfce4-terminal --drop-down"/>
-      <property name="AudioRaiseVolume" type="string" value="pactl set-sink-volume 0 +10%"/>
-      <property name="AudioLowerVolume" type="string" value="pactl set-sink-volume 0 -10%"/>
-      <property name="AudioMute" type="string" value="pactl set-sink-volume 0 0%"/>
       <property name="&lt;Super&gt;c" type="string" value="jumpapp atom"/>
+      <property name="AudioLowerVolume" type="string" value="pactl set-sink-volume alsa_output.pci-0000_06_00.1.hdmi-stereo-extra1 -10%"/>
+      <property name="AudioRaiseVolume" type="string" value="pactl set-sink-volume alsa_output.pci-0000_06_00.1.hdmi-stereo-extra1 +10%"/>
+      <property name="AudioMute" type="string" value="pactl set-sink-volume alsa_output.pci-0000_06_00.1.hdmi-stereo-extra1 0%"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
