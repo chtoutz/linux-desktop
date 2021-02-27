@@ -18,7 +18,8 @@ mkdir -p \
   ${HOME}/s \
   ${HOME}/.icons \
   ${HOME}/.local \
-  ${HOME}/.ssh
+  ${HOME}/.ssh \
+  ${HOME}/.config/conky
 
 cp -fvr \
   ../dotfiles/.bash_aliases \
@@ -37,8 +38,16 @@ cp -fvr \
 cp -vr ../s/* ${HOME}/s/
 cp -vr ../dotfiles/.icons/* ${HOME}/.icons/
 cp -vr ../dotfiles/.local/* ${HOME}/.local/
+cp -vr ../dotfiles/.config/conky/conky.conf ${HOME}/.config/conky/
 
 # update xfce settings
-# killall xfconfd
-# /usr/lib/xfce4/xfconf/xfconfd &
-# xfsettingsd --replace &
+killall xfconfd
+/usr/lib/xfce4/xfconf/xfconfd &
+xfsettingsd --replace &
+
+# Install yay
+cd /opt
+sudo git clone https://aur.archlinux.org/yay.git
+sudo chown -R stutz:users ./yay
+cd yay
+makepkg -si

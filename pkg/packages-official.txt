@@ -46,6 +46,7 @@ ttf-roboto
 transmission-gtk
 vlc
 volumeicon
+wget
 xarchiver
 xdg-user-dirs
 xbindkeys
