@@ -38,6 +38,7 @@ pavucontrol
 pulseaudio-bluetooth
 ristretto
 sudo
+syncthing
 terminus-font
 ttf-hack
 ttf-inconsolata
